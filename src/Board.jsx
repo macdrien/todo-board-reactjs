@@ -1,19 +1,33 @@
 export default function Board({ states }) {
-  return states.map((state) => (
-    <div>
-      <h4>{state.name}</h4>
-      <ul>
-        {state.tasks.map((task) => (
-          <li>
-            {task.name}
-            <ul>
-              {task.tags.map((tag) => (
-                <li>{tag}</li>
+  return (
+    <div class="flexCentered" style={{ flexDirection: "column" }}>
+      <h1>Task board</h1>
+      <div
+        style={{
+          width: "100%",
+          display: "flex",
+          justifyContent: "space-between",
+          gap: "5px"
+        }}
+      >
+        {states.map((state) => (
+          <div>
+            <h2>{state.name}</h2>
+            <div>
+              {state.tasks.map((task) => (
+                <div>
+                  <h4>{task.name}</h4>
+                  <div>
+                    {task.tags.map((tag) => (
+                      <div>{tag}</div>
+                    ))}
+                  </div>
+                </div>
               ))}
-            </ul>
-          </li>
+            </div>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
-  ));
+  );
 }
