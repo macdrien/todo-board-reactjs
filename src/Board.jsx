@@ -39,10 +39,26 @@ export default function Board({ states }) {
                     flexDirection: "column"
                   }}
                 >
-                  <h4>{task.name}</h4>
-                  <div>
+                  <h3 style={{ marginBottom: "10px" }}>{task.name}</h3>
+                  <div
+                    className="flexCentered"
+                    style={{
+                      flexWrap: "wrap",
+                      gap: "5px",
+                      marginBottom: "10px"
+                    }}
+                  >
                     {task.tags.map((tag) => (
-                      <div>{tag}</div>
+                      <div
+                        style={{
+                          padding: "5px",
+                          backgroundColor: "#dddddd",
+                          boxShadow: "1px 1px #999999",
+                          borderRadius: "5px"
+                        }}
+                      >
+                        {tag}
+                      </div>
                     ))}
                   </div>
                 </div>
