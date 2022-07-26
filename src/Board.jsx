@@ -5,17 +5,40 @@ export default function Board({ states }) {
       <div
         style={{
           width: "100%",
-          display: "flex",
-          justifyContent: "space-between",
+          display: "grid",
+          gridTemplateColumns: "repeat(3, 1fr)",
           gap: "5px"
         }}
       >
         {states.map((state) => (
-          <div>
+          <div
+            style={{
+              backgroundColor: "#dddddd",
+              borderRadius: "10px",
+              boxShadow: "1px 1px #aaaaaa",
+              margin: 0,
+              padding: "10px"
+            }}
+          >
             <h2>{state.name}</h2>
-            <div>
+            <div
+              style={{
+                margin: 0,
+                padding: 0
+              }}
+            >
               {state.tasks.map((task) => (
-                <div>
+                <div
+                  style={{
+                    backgroundColor: "#bbbbbb",
+                    border: "1px solid #aaaaaa",
+                    boxShadow: "1px 1px #999999",
+                    borderRadius: "10px",
+                    marginBottom: "10px",
+                    display: "flex",
+                    flexDirection: "column"
+                  }}
+                >
                   <h4>{task.name}</h4>
                   <div>
                     {task.tags.map((tag) => (
