@@ -6,7 +6,7 @@ import states from "./tasks";
 export default function App() {
   return (
     <div className="App">
-      <Board states={states} />
+      <Board initialStates={states} />
     </div>
   );
 }
