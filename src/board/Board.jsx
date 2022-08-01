@@ -1,15 +1,10 @@
+import "./Board.css";
+
 export default function Board({ states }) {
   return (
-    <div class="flexCentered" style={{ flexDirection: "column" }}>
+    <div class="flexCentered boardComponent">
       <h1>Task board</h1>
-      <div
-        style={{
-          width: "100%",
-          display: "grid",
-          gridTemplateColumns: "repeat(3, 1fr)",
-          gap: "5px"
-        }}
-      >
+      <div className="board">
         {states.map((state) => (
           <div
             style={{

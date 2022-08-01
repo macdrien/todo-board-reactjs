@@ -1,5 +1,5 @@
 import React from "react";
-import Board from "./Board";
+import Board from "./board/Board";
 import "./styles.css";
 import states from "./tasks";
 
