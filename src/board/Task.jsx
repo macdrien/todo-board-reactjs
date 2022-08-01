@@ -11,6 +11,11 @@ export default function Task({ task }) {
           <Tag tag={tag} />
         ))}
       </div>
+      <div className="flexCentered actions">
+        <div className="arrow left" />
+        <div className="remove" />
+        <div className="arrow right" />
+      </div>
     </div>
   );
 }
