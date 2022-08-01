@@ -8,7 +8,7 @@ export default function Task({ task, removeTask }) {
       <h3 className="taskName">{name}</h3>
       <div className="flexCentered tags">
         {tags.map((tag) => (
-          <Tag tag={tag} />
+          <Tag key={tag} tag={tag} />
         ))}
       </div>
       <div className="flexCentered actions">

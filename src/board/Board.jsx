@@ -9,7 +9,7 @@ export default function Board({ initialStates }) {
       <h1>Task board</h1>
       <div className="board">
         {states.map((state) => (
-          <State state={state} removeTask={removeTask} />
+          <State key={state.name} state={state} removeTask={removeTask} />
         ))}
       </div>
     </div>

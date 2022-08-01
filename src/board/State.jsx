@@ -8,7 +8,7 @@ export default function State({ state, removeTask }) {
       <h2>{name}</h2>
       <div className="tasks">
         {tasks.map((task) => (
-          <Task task={task} removeTask={removeTask} />
+          <Task key={task.name} task={task} removeTask={removeTask} />
         ))}
       </div>
     </div>
