@@ -1,3 +1,4 @@
+import Tag from "./Tag";
 import "./Task.css";
 
 export default function Task({ task }) {
@@ -7,16 +8,7 @@ export default function Task({ task }) {
       <h3 className="taskName">{name}</h3>
       <div className="flexCentered tags">
         {tags.map((tag) => (
-          <div
-            style={{
-              padding: "5px",
-              backgroundColor: "#dddddd",
-              boxShadow: "1px 1px #999999",
-              borderRadius: "5px"
-            }}
-          >
-            {tag}
-          </div>
+          <Tag tag={tag} />
         ))}
       </div>
     </div>
