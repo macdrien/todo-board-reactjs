@@ -1,7 +1,7 @@
 import Tag from "./Tag";
 import "./Task.css";
 
-export default function Task({ task }) {
+export default function Task({ task, removeTask }) {
   const { name, tags } = task;
   return (
     <div className="task">
@@ -13,7 +13,7 @@ export default function Task({ task }) {
       </div>
       <div className="flexCentered actions">
         <div className="arrow left" />
-        <div className="remove" />
+        <div className="remove" onClick={(_event) => removeTask(name)} />
         <div className="arrow right" />
       </div>
     </div>
