@@ -1,0 +1,12 @@
+.state {
+  background-color: #dddddd;
+  border-radius: 10px;
+  box-shadow: 1px 1px #aaaaaa;
+  margin: 0;
+  padding: 10px;
+}
+
+.tasks {
+  margin: 0;
+  padding: 0;
+}
